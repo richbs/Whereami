@@ -13,6 +13,7 @@
 		5AFDFAA2150EAC120011F25D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5AFDFAA0150EAC120011F25D /* InfoPlist.strings */; };
 		5AFDFAA4150EAC120011F25D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDFAA3150EAC120011F25D /* main.m */; };
 		5AFDFAA8150EAC120011F25D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDFAA7150EAC120011F25D /* AppDelegate.m */; };
+		5AFDFAAF150EB04F0011F25D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AFDFAAE150EB04F0011F25D /* MainWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5AFDFAA5150EAC120011F25D /* Whereami-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Whereami-Prefix.pch"; sourceTree = "<group>"; };
 		5AFDFAA6150EAC120011F25D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5AFDFAA7150EAC120011F25D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5AFDFAAE150EB04F0011F25D /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				5AFDFAA6150EAC120011F25D /* AppDelegate.h */,
 				5AFDFAA7150EAC120011F25D /* AppDelegate.m */,
 				5AFDFA9E150EAC120011F25D /* Supporting Files */,
+				5AFDFAAE150EB04F0011F25D /* MainWindow.xib */,
 			);
 			path = Whereami;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AFDFAA2150EAC120011F25D /* InfoPlist.strings in Resources */,
+				5AFDFAAF150EB04F0011F25D /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

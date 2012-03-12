@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-@implementation AppDelegate
+@implementation WhereamiAppDelegate
 
 @synthesize window = _window;
 
