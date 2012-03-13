@@ -20,9 +20,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    // Create Location Manager
+    locationManager = [[CLLocationManager alloc] init];
+    
+    // This here App Delegate going to be the delegate for this too
+    [locationManager setDelegate:self];
+    
+    // We want all results from LM
+    [locationManager setDistanceFilter:kCLDistanceFilterNone];
+    
+    // And all results
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    
+    // Start with location now!
+    [locationManager startUpdatingLocation];
+    
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -65,5 +84,19 @@
      See also applicationDidEnterBackground:.
      */
 }
+
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"%@", newLocation);
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+    didFailWithError:(NSError *)error
+{
+    NSLog(@"Could not find location");
+}
+
 
 @end

@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface WhereamiAppDelegate : UIResponder <UIApplicationDelegate>
-
+@interface WhereamiAppDelegate : NSObject <UIApplicationDelegate, CLLocationManagerDelegate>
+{
+    CLLocationManager *locationManager;
+}
 @property (strong, nonatomic) IBOutlet UIWindow *window;
 
 @end
