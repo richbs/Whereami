@@ -15,4 +15,6 @@
 }
 @property (strong, nonatomic) IBOutlet UIWindow *window;
 
+- (void)doSomethingWeird;
+
 @end

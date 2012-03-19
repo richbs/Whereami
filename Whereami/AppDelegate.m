@@ -27,6 +27,8 @@
     // This here App Delegate going to be the delegate for this too
     [locationManager setDelegate:self];
     
+    [self doSomethingWeird];
+    
     // We want all results from LM
     [locationManager setDistanceFilter:kCLDistanceFilterNone];
     
@@ -98,5 +100,11 @@
     NSLog(@"Could not find location");
 }
 
+- (void)doSomethingWeird
+{
+    NSLog(@"Line 1");
+    NSLog(@"Line 2");
+    NSLog(@"Line 3");
+}
 
 @end
