@@ -27,8 +27,8 @@
     // This here App Delegate going to be the delegate for this too
     [locationManager setDelegate:self];
     
-    [self doSomethingWeird];
-    
+    //[self doSomethingWeird];
+
     // We want all results from LM
     [locationManager setDistanceFilter:kCLDistanceFilterNone];
     
@@ -37,7 +37,14 @@
     
     // Start with location now!
     [locationManager startUpdatingLocation];
+
+    if ([CLLocationManager headingAvailable]) {
+        NSLog(@"%@", @"foo");
+    }
     
+    // And kick off the heading
+    [locationManager startUpdatingHeading];
+        
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
@@ -92,6 +99,13 @@
            fromLocation:(CLLocation *)oldLocation
 {
     NSLog(@"%@", newLocation);
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateHeading:(CLHeading *)newHeading
+{
+    NSLog(@"%@ %@", newHeading, @"foo");
+    
 }
 
 - (void)locationManager:(CLLocationManager *)manager
